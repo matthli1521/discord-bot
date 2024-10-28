@@ -1,5 +1,5 @@
-const { Client } = require("discord.js");
-const { token } = require("./token.json");
+const { Client } = require('discord.js');
+const { token } = require('./token.json');
 
 const client = new Client({
   intents: [
@@ -10,4 +10,13 @@ const client = new Client({
   ],
 });
 
+client.on('ready', (c) => {
+  console.log('bot ready');
+});
+client.on('messageCreate', (msg) => {
+  console.log(msg.content);
+  if (messageLink.content === Ronney) {
+    messageLink.reply('');
+  }
+});
 client.login(token);
